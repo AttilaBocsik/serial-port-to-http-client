@@ -375,18 +375,18 @@ static void send_telegraph_http(const unsigned char *input)
        }
 
        esp_http_client_config_t config = {
-           .url = "https://device-backend-api.herokuapp.com/device",
+           .url = "<API url>",
            .event_handler = _http_event_handler,
-           .username = "attis71",
-           .password = "Za1957",
+           .username = "<user>",
+           .password = "<password>",
            .auth_type = HTTP_AUTH_TYPE_BASIC};
        esp_http_client_handle_t client = esp_http_client_init(&config);
        esp_err_t err;
 
        char telegraph[218] = {0};
-       stpcpy(telegraph, "uuid=f86e31f0-c924-40f1-83cf-763b8b3940df");
-       strcat(telegraph, "&latitude=46.409636");
-       strcat(telegraph, "&longitude=20.743210");
+       stpcpy(telegraph, "uuid=abc");
+       strcat(telegraph, "&latitude=000");
+       strcat(telegraph, "&longitude=000");
        strcat(telegraph, "&value=");
        strcat(telegraph, dataStr);
        strcat(telegraph, "&denomination=Sensor");
