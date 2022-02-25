@@ -3,7 +3,7 @@
 ## Description:
 Receiving a string stream from a UART2 serial port.
 Incoming data from UART 2 serial port is even forwarded to UART1 serial port.
-The data is sent in JSON format via http to the API.
+The data is sent in application/x-www-form-urlencodedModify README.md format via http to the API.
 
 
 ## Hardware:
